@@ -63,7 +63,7 @@ function diff(start,end){
 }
 
 //根据id找元素
-function $(id){
+function $id(id){
 	return document.getElementById(id);
 }
 //判断鼠标操作的是 左键？滚轮？右键？
