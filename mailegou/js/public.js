@@ -1,3 +1,17 @@
+//生成验证码函数
+function yzm(){
+	var str = "";
+	for( var i = 0 ; i < 4 ; i++ ){
+		var ch = rand( 48 , 122 );
+		if( ch >= 58 && ch <= 64 || ch >= 91 && ch <= 96 ){
+			i--;
+		}else{
+			str += `<span class='yzmcolor'>${String.fromCharCode( ch )}</span>`;
+		}
+	}
+	return str;
+}
+
 //获取非行内元素样式值
 function getStyle(obj,attr){
 	if( window.getComputedStyle ){
@@ -25,7 +39,7 @@ function pz(obj1,obj2){
 	}
 }
 //获取任意区间值函数
-function getRand(min,max){
+function rand(min,max){
 	return Math.round( Math.random()*(max-min) + min );
 }
 //获取颜色
@@ -33,7 +47,7 @@ function getColor(){
 	var str = "0123456789abcdef";
 	var color = "#";
 	for( var i = 0; i < 6 ; i++ ){
-		color +=  str.charAt(getRand(0,15));
+		color +=  str.charAt(rand(0,15));
 	}
 	return color;
 }

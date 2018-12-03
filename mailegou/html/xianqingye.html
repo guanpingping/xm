@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/xianqingye.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--头部-->
+			<div id="header-wrap"></div>
+			<!--leftmenu-->
+			<div id="left-menu-wrap"></div>
+			<!--主体-->
+			<div id="main">
+				<!--main-top-->
+				<div class="main-top">
+					<div class="main-top-con">
+						<span>首页</span>
+						<span>></span>
+						<span>【A】满额送豪礼</span>
+						<span>></span>
+						<i>荷兰牛栏奶粉Nutrilon 1段（0-6个月）850g（海外版）</i>
+					</div>
+				</div>
+				<!--main-fangdajing-->
+				<div class="box">
+					<div class="middle">
+						<img src="../img/1m.jpg" style="display: block;"/>
+						<img src="../img/2m.png" />
+						<img src="../img/3m.jpg" />
+						<img src="../img/4m.jpg" />
+						<img src="../img/5m.jpg" />
+						<div class="mask"></div>
+					</div>
+					<div class="small">
+						<img src="../img/1s.jpg" style="display: block;"/>
+						<img src="../img/2s.png" />
+						<img src="../img/3s.jpg" />
+						<img src="../img/4s.jpg" />
+						<img src="../img/5s.jpg" />
+					</div>
+					<div class="big">
+						<img src="../img/1b.jpg" style="display: block;"/>
+						<img src="../img/2b.png" />
+						<img src="../img/3b.jpg" />
+						<img src="../img/4b.jpg" />
+						<img src="../img/5b.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--尾部-->
+			<div id="footer-wrap"></div>
+		</div>
+		
+		<!--加载公共的头部和尾部-->
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+		<script>
+			$("#header-wrap").load("public.html header");
+			$("#left-menu-wrap").load("public.html .menubox");
+			$("#footer-wrap").load("public.html footer");
+		</script>
+
+	</body>
+</html>
+<script src="../js/public.js"></script>
+<script>
+	window.onload = function(){
+		var scr = document.createElement("script");
+		document.body.appendChild( scr );
+		scr.src="http://127.0.0.1/mailegou/js/common.js";
+		
+		var xqy = document.createElement("script");
+		document.body.appendChild( xqy );
+		xqy.src="http://127.0.0.1/mailegou/js/xianqingye.js";
+		
+		var s = document.createElement("script");
+		document.body.appendChild( s );
+		s.src="http://127.0.0.1/mailegou/js/search.js";
+	}
+</script>
