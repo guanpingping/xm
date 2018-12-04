@@ -3,8 +3,7 @@ body {
 }
 
 #main {
-  min-height: 500px;
-  background: pink;
+  overflow: hidden;
 }
 
 #left-menu-wrap {
@@ -37,21 +36,62 @@ body {
   font-style: normal;
 }
 
+.wrapper-proinfo {
+  width: 1190px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.proinfo-left {
+  float: left;
+}
+.proinfo-left .video-box {
+  display: none;
+}
+.proinfo-left .video-box video {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+}
+.proinfo-left .video-box .video-close {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 320px;
+  background: url(../img/xianqingyeicon.png) no-repeat -854px -824px;
+  cursor: pointer;
+}
+.proinfo-left .video-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: url(../img/xianqingyeicon.png) no-repeat -1016px -200px;
+}
+
 .box {
   width: 350px;
   height: 400px;
   position: relative;
-  border: 1px solid #ccc;
-  margin-left: 38px;
+  z-index: 99;
 }
 
 .box .middle {
   width: 350px;
   height: 350px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 .box .middle img {
   display: none;
@@ -64,7 +104,7 @@ body {
   height: 50px;
   position: absolute;
   top: 350px;
-  left: 0;
+  left: 0px;
   box-sizing: border-box;
 }
 .box .small img {
@@ -73,6 +113,7 @@ body {
   width: 50px;
   height: 50px;
   margin-left: 16px;
+  box-sizing: border-box;
 }
 
 .box .big {
@@ -80,15 +121,17 @@ body {
   height: 400px;
   border: 1px solid #ccc;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 400px;
   overflow: hidden;
   box-sizing: border-box;
+  display: none;
 }
 .box .big img {
   display: none;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .box .mask {
@@ -96,8 +139,309 @@ body {
   height: 175px;
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.proinfo-main {
+  padding: 0 30px;
+  float: left;
+}
+.proinfo-main .proinfo-tit {
+  padding: 13px 10px 12px;
+  height: 94px;
+  box-sizing: border-box;
+}
+.proinfo-main .proinfo-tit h2 {
+  min-height: 24px;
+  font-size: 16px;
+}
+.proinfo-main .proinfo-tit h2 span {
+  font-size: 12px;
+  width: 50px;
+  height: 24px;
+  display: inline-block;
+  line-height: 24px;
+  text-align: center;
+  background: #f50;
+  color: #fff;
+}
+.proinfo-main .proinfo-tit p {
+  color: #f60;
+}
+.proinfo-main .proinfo-tit p a {
+  color: #6a9fde;
+  text-decoration: underline;
+}
+.proinfo-main .tit-img {
+  height: 40px;
+  width: 100%;
+}
+.proinfo-main .proinfo-price .proinfo-price-back {
+  position: relative;
+  padding: 14px 0 8px;
+  background: url(../img/xqyprice.png) no-repeat;
+  margin-bottom: 15px;
+}
+.proinfo-main .proinfo-price dl {
+  overflow: hidden;
+  line-height: 30px;
+  height: auto;
+  margin-bottom: 2px;
+  padding-left: 10px;
+}
+.proinfo-main .proinfo-price dl dt {
+  color: #999;
+  float: left;
+  width: 72px;
+  letter-spacing: .5em;
+}
+.proinfo-main .proinfo-price dl dd {
+  float: left;
+}
+.proinfo-main .proinfo-price dl dd a {
+  margin: 0 10px;
+  color: #38d;
+}
+.proinfo-main .proinfo-price dl dd .updateCount {
+  width: 22px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+.proinfo-main .proinfo-price dl dd #add {
+  margin-right: 10px;
+}
+.proinfo-main .proinfo-price dl dd .txt {
+  width: 37px;
+  height: 30px;
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #fff;
+}
+.proinfo-main .proinfo-price dl .yigoujia {
+  color: #e00;
+  font-size: 30px;
+  font-weight: 700;
+}
+.proinfo-main .proinfo-price dl .yigoujia i {
+  font-size: 18px;
+  font-style: normal;
+}
+.proinfo-main .proinfo-price dl .yigoujia span {
+  font-size: 24px;
+}
+.proinfo-main .proinfo-price dl .youhuijuan span {
+  width: 65px;
+  height: 18px;
+  display: inline-block;
+  background: url(../img/xianqingyeicon.png) no-repeat -359px -406px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.proinfo-main .proinfo-price dl .group {
+  margin-left: 72px;
+}
+.proinfo-main .proinfo-price dl .olabel {
+  margin-right: 10px;
+}
+.proinfo-main .proinfo-price dl .olabel label {
+  display: inline-block;
+  width: 52px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #FF6600;
+  border: 1px solid #FF6600;
+  position: relative;
+}
+.proinfo-main .proinfo-price dl .olabel .lsj {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 4px solid #ccc;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  margin-left: 4px;
+}
+.proinfo-main .proinfo-price dl .marginr0 {
+  margin-right: 0;
+}
+.proinfo-main .proinfo-price dl .unique img {
+  margin-left: -4px;
+  margin-bottom: 30px;
+}
+.proinfo-main .proinfo-price .super-con {
+  line-height: 18px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.proinfo-main .proinfo-price .super-con dd img {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.proinfo-main .proinfo-price .super-con .group {
+  margin-right: 10px;
+}
+.proinfo-main .proinfo-price .super-agreements {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+.proinfo-main .proinfo-price .super-agreements a {
+  display: inline-block;
+  text-align: right;
+  line-height: 18px;
+}
+.proinfo-main .proinfo-price .super-agreements a dd:nth-of-type(1) {
+  float: right;
+}
+.proinfo-main .proinfo-price .super-agreements a dd:nth-of-type(2) {
+  float: right;
+  clear: right;
+  color: #666666;
+  font-weight: 600;
+}
+.proinfo-main .proinfo-price .kf img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.proinfo-main .proinfo-price .proinfo-item {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dotted #ccc;
+}
+.proinfo-main .proinfo-price .proinfo-item ul {
+  width: 484px;
+  float: left;
+}
+.proinfo-main .proinfo-price .proinfo-item ul li {
+  margin: 0 5px 5px 0;
+  border: 1px solid #ccc;
+  padding: 1px 8px 1px 1px;
+  min-width: 60px;
+  text-align: center;
+}
+.proinfo-main .proinfo-price .proinfo-item ul li a {
+  margin: 0;
+}
+.proinfo-main .proinfo-price .proinfo-item ul li a img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  margin-right: 4px;
+}
+.proinfo-main .proinfo-price .shop {
+  clear: left;
+  padding: 15px 11px;
+  border-bottom: 1px dotted #ccc;
+}
+.proinfo-main .proinfo-price .shop .shopbtn {
+  border: 0;
+  margin-right: 10px;
+  color: #fff;
+}
+.proinfo-main .proinfo-price .shop .shopbtn .gomoney {
+  padding: 5px 15px;
+  background: #000;
+}
+.proinfo-main .proinfo-price .shop .shopbtn .addshop {
+  padding: 5px 15px;
+  background: #f60;
+}
+
+.content {
+  width: 1190px;
+  height: auto;
+  margin: 10px auto 0;
+  overflow: hidden;
+  display: flex;
+}
+.content .content-left {
+  width: 190px;
+  min-height: 500px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.content .content-left .left-tit {
+  padding-left: 10px;
+  line-height: 34px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.content .content-left .left-con .left-con-group {
+  padding: 10px 0;
+  margin: 1px 10px -1px;
+}
+.content .content-left .left-con .left-con-group a img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+.content .content-left .left-con .left-con-group p {
+  height: 36px;
+  margin: 5px 0;
+}
+.content .content-left .left-con .left-con-group p span {
+  background: #f60;
+  color: #FFFFFF;
+}
+.content .content-left .left-con .left-con-group p i {
+  font-style: normal;
+  color: #f60;
+}
+.content .content-right {
+  margin-left: 10px;
+  flex-grow: 1;
+  border: 1px solid #ccc;
+}
+.content .content-right .right-tit {
+  height: 47px;
+  line-height: 47px;
+  background: #ddd;
+  position: relative;
+  font-size: 14px;
+  width: 988px;
+}
+.content .content-right .right-tit ul .tit-active {
+  background: #fff;
+  border-top: 2px solid #f60;
+  color: #f60;
+}
+.content .content-right .right-tit ul li {
+  padding: 0 25px;
+}
+.content .content-right .right-tit .right-tit-r {
+  background: #f60;
+  position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  padding: 0 25px;
+  color: #fff;
+}
+.content .content-right .right-con-group {
+  display: none;
+}
+.content .content-right .right-con-group .gp-he {
+  margin: 20px;
+  color: #666;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.content .content-right .right-con-group .gp-he-tit {
+  height: 24px;
+  line-height: 24px;
+  background: #eee;
+}
+.content .content-right .right-con-group .gp-he-tit .gp-he-le {
+  float: left;
+}
+.content .content-right .right-con-group .gp-he-tit .gp-he-ri {
+  float: right;
 }
 
 /*# sourceMappingURL=xianqingye.css.map */
