@@ -3,8 +3,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopcar.css" />
 	</head>
 	<body>
-		购物车
+		<div class="wrapper">
+			<!--头部-->
+			<div id="header-wrap"></div>
+			<!--主体-->
+			<div id="main">
+				<div class="prolist">
+					<div class="shop-item">
+						<p class="f1">
+							
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--尾部-->
+			<div id="footer-wrap"></div>
+		</div>
+		<!--加载公共的头部和尾部-->
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+		<script>
+			$("#header-wrap").load("public.html header");
+			$("#footer-wrap").load("public.html footer");
+		</script>
 	</body>
 </html>

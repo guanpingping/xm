@@ -350,7 +350,10 @@ body {
   background: #000;
 }
 .proinfo-main .proinfo-price .shop .shopbtn .addshop {
-  padding: 5px 15px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   background: #f60;
 }
 
@@ -358,11 +361,12 @@ body {
   width: 1190px;
   height: auto;
   margin: 10px auto 0;
+  position: relative;
   overflow: hidden;
-  display: flex;
 }
 .content .content-left {
   width: 190px;
+  float: left;
   min-height: 500px;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -395,22 +399,26 @@ body {
   color: #f60;
 }
 .content .content-right {
+  width: 988px;
+  box-sizing: border-box;
   margin-left: 10px;
-  flex-grow: 1;
+  float: left;
   border: 1px solid #ccc;
 }
 .content .content-right .right-tit {
   height: 47px;
   line-height: 47px;
   background: #ddd;
-  position: relative;
   font-size: 14px;
-  width: 988px;
+  width: 986px;
+  z-index: 9;
 }
 .content .content-right .right-tit ul .tit-active {
   background: #fff;
   border-top: 2px solid #f60;
   color: #f60;
+  height: 47px;
+  box-sizing: border-box;
 }
 .content .content-right .right-tit ul li {
   padding: 0 25px;
@@ -420,28 +428,182 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0 25px;
+  width: 100px;
   color: #fff;
 }
 .content .content-right .right-con-group {
   display: none;
 }
-.content .content-right .right-con-group .gp-he {
+.content .content-right .right-con-group .con-group {
+  height: 220px;
+  background-color: #fff7e8;
+}
+.content .content-right .right-con-group .con-group .con-group-left {
+  width: 245px;
+  padding: 18px;
+  border-right: 1px solid #eb7c00;
+  overflow: hidden;
+  float: left;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-t .allper {
+  font-size: 48px;
+  color: #EB7C00;
+  float: left;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-t .agreeall {
+  float: left;
+  line-height: 20px;
+  margin: 10px 0 0 20px;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-t .agreeall span {
+  display: block;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-t .agreeall span:nth-of-type(1) {
+  color: #000;
+  font-size: 14px;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-t .agreeall span:nth-of-type(2) {
+  color: #666;
+  font-size: 12px;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-b ul li {
+  line-height: 24px;
+  height: 24px;
+}
+.content .content-right .right-con-group .con-group .con-group-left .cont-group-left-b ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 130px;
+  height: 15px;
+  background: #FF6600;
+}
+.content .content-right .right-con-group .con-group .con-group-ri {
+  float: left;
+  padding: 14px 20px;
+  line-height: 30px;
+  width: 666px;
+  box-sizing: border-box;
+}
+.content .content-right .right-con-group .con-group .con-group-ri .look {
+  float: right;
+  color: #3388DD;
+}
+.content .content-right .right-con-group .con-group .con-group-ri h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FF6600;
+}
+.content .content-right .right-con-group .con-group .con-group-ri .spancolor000 {
+  color: #000;
+}
+.content .content-right .right-con-group .con-group .con-group-ri .bordbot {
+  color: #900;
+  border-bottom: 1px dashed #ccc;
+}
+.content .content-right .right-con-group .con-group .con-group-ri .bordbot span {
+  margin-right: 20px;
+}
+.content .content-right .right-con-group .right-con-three {
+  padding: 10px;
+}
+.content .content-right .right-con-group .right-con-three li {
+  padding: 10px 0;
+  line-height: 24px;
+}
+.content .content-right .proinfo-canshu {
+  width: 780px;
+}
+.content .content-right .proinfo-canshu .group-parameter {
+  overflow: hidden;
+  float: left;
+}
+.content .content-right .proinfo-canshu .gp-he {
   margin: 20px;
   color: #666;
   overflow: hidden;
   border: 1px solid #ddd;
+  width: 746px;
 }
-.content .content-right .right-con-group .gp-he-tit {
-  height: 24px;
-  line-height: 24px;
+.content .content-right .proinfo-canshu .gp-he-con {
+  width: 746px;
+  box-sizing: border-box;
+  padding: 20px 18px;
+  overflow: hidden;
+}
+.content .content-right .proinfo-canshu .gp-he-con li {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: left;
+  height: 20px;
+}
+.content .content-right .proinfo-canshu .gp-he-tit {
+  height: 30px;
+  line-height: 30px;
   background: #eee;
+  border-bottom: 1px solid #ddd;
 }
-.content .content-right .right-con-group .gp-he-tit .gp-he-le {
+.content .content-right .proinfo-canshu .gp-he-tit .gp-he-le {
   float: left;
+  font-weight: 600;
 }
-.content .content-right .right-con-group .gp-he-tit .gp-he-ri {
+.content .content-right .proinfo-canshu .gp-he-tit .gp-he-ri {
   float: right;
+  margin-right: 10px;
+}
+.content .content-right .proinfo-canshu .gp-he-tit .gp-he-ri a {
+  color: #6A9FDE;
+}
+.content .content-right .proinfo-canshu .group-right-position {
+  position: relative;
+  margin-left: 827px;
+  background: #f9fafb;
+  top: 20px;
+  height: 12060px;
+  width: 159px;
+}
+.content .content-right .proinfo-canshu .group-right-position ul {
+  position: absolute;
+  top: auto;
+  width: 159px;
+  font-size: 14px;
+  padding: 68px 0 100px 0;
+  line-height: 38px;
+}
+.content .content-right .proinfo-canshu .group-right-position ul li {
+  height: 38px;
+  float: none;
+  padding-left: 20px;
+}
+.content .content-right .proinfo-canshu .group-right-position ul .rpoi-active {
+  background: #FF6600;
+  position: relative;
+  color: #fff;
+}
+.content .content-right .proinfo-canshu .group-right-position ul .rpoi-active::after {
+  content: "";
+  border: 8px solid  #f60;
+  height: 0;
+  width: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 30%;
+  left: -16px;
+}
+.content .content-right .proinfo-canshu .gp-detail {
+  padding: 20px;
+}
+.content .content-right .proinfo-canshu .gp-detail img {
+  width: 100%;
+}
+
+.shopcarbtn button {
+  border: 0;
+  background: #FF6600;
+  width: 100px;
+  height: 40px;
+  outline: none;
 }
 
 /*# sourceMappingURL=xianqingye.css.map */

@@ -1,0 +1,11 @@
+body {
+  background: #fff; }
+
+#main {
+  height: 500px;
+  width: 100%;
+  background: pink; }
+  #main .prolist {
+    padding: 40px; }
+
+/*# sourceMappingURL=shopcar.css.map */

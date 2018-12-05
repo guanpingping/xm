@@ -53,15 +53,45 @@ $( function(){
 	})
 	
 	
+	
+	//吸顶效果
 	$(document).scroll( function(){
 		var stop = $("body,html").scrollTop();
 		var hei = $(".content").offset().top;
-		if( stop >= hei ){
+		var tithei = $(".right-tit").outerHeight();
+		var detcreatetop = $(".gp-ul-bottom").offset().top + $(".gp-ul-bottom").height()/2;
+		
+		//右侧的实现更改classname
+		var grouprlist = $(".group-right-position ul li"),
+		    gpdepicsT = $(".gp-detail-pics").offset().top,
+		    gpdenumT = $(".gp-detail-num").offset().top,
+		    gpdecreateT =  $(".gp-ul-bottom").offset().top;
+		    
+//		    console.log(grouprlist);
+		    if( stop > gpdecreateT ){
+		    	grouprlist.eq(2).addClass("rpoi-active").siblings().removeClass("rpoi-active");
+		    }else if(stop > gpdenumT ){
+		    	grouprlist.eq(1).addClass("rpoi-active").siblings().removeClass("rpoi-active");
+		    }else if( stop > gpdepicsT ){
+		    	grouprlist.eq(0).addClass("rpoi-active").siblings().removeClass("rpoi-active");
+		    }
+		
+		if( stop >= hei){
 			$(".right-tit").css({"position":"fixed","top":0});
 		}else{
 			$(".right-tit").css({"position":"relative"});
 		}
+		
+		if(stop >= hei && stop <= detcreatetop ){
+			$(".group-right-position ul").css({"position":"fixed","top":0 });
+		}else if(stop >= detcreatetop){
+			$(".group-right-position ul").css({"position":"absolute","bottom":0,"top":"auto"});
+		}else{
+			$(".group-right-position ul").css({"position":"absolute","top":0,"bottom":"auto"});
+		}
 	})
+	
+	
 	
 	var rtitlist = $(".right-tit ul li");
 	var rconlist = $(".right-con-group");
@@ -69,4 +99,6 @@ $( function(){
 		$(this).addClass("tit-active").siblings().removeClass("tit-active");
 		rconlist.eq($(this).index()).show().siblings().hide();
 	})
+	
+	
 })

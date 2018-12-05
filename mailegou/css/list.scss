@@ -1,0 +1,54 @@
+body {
+  background: #fff;
+}
+#main{
+    width: 100%;
+    min-height: 500px;
+    background: pink;
+    .proinfo-wrap{
+        padding: 50px;
+        background: skyblue;
+        overflow: hidden;
+        ul{
+            width: 1190px;
+            margin: 0 auto;
+            li{
+               background: #fff;
+                width: 222px;
+                margin: 0 10px 10px 0;
+                padding: 10px;
+                box-sizing: border-box;
+                a{
+                    img{
+                        width: 200px;
+                        height: 200px;
+                    }
+                    .proinfo-txt{
+                        margin-top: 20px;
+                        line-height: 24px;
+                    }
+                    .proinfo-price{
+                        padding-bottom: 10px;
+                        color: #FF4400;
+                        font-weight: 600;
+                        font-size: 16px;
+                        del{
+                            color: #CCCCCC;
+                            font-weight:500;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                 button{
+                        width: 100px;
+                        height: 30px;
+                        background: #eee;
+                        display: block;
+                        border: 1px solid #ddd;
+                        margin: 0 auto;
+                        cursor: pointer;
+                    }
+            }
+        }
+    }
+}
