@@ -3,7 +3,7 @@
 /*-----------------article---------------------*/
 
 article {
-	width: 1280px;
+	width: 1190px;
 	height: 480px;
 	margin: 0 auto;
 	position: relative;
@@ -11,7 +11,7 @@ article {
 article .lbt .lbt_list{
 	position: absolute;
 	top: 0;
-	/*left: 218px;*/
+	left: 0;
 	width: 100%;
 }
 article .lbt .lbt_list:a:after{
@@ -26,7 +26,7 @@ article .lbt .lbt_list li{
 	height: 480px;
 	width: 100%;
 	margin: auto;
-	padding-left: 218px;
+	padding-left: 180px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -54,7 +54,7 @@ article .lbt .lbt_ol li:nth-of-type(1){
 
 article .menuright{
 	position: absolute;
-	right: 52px;
+	right: 0;
 	top: 0;
 	width: 200px;
 	height: 480px;

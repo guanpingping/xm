@@ -32,7 +32,7 @@ $(function(){
 			var data = `status=login&uname=${uname}&upwd=${upwd}&id=${Math.random()}`;
 			$.ajax({
 				type:"get",
-				url:"http://127.0.0.1/mailegou/php/login-register.php",
+				url:"../php/login-register.php",
 				async:true,
 				datatype:"json",
 				data:data,
@@ -40,7 +40,7 @@ $(function(){
 					if( msg == "0" ){
 						alert("登录成功");
 						localStorage.setItem("loguname",uname);
-						location.href="http://127.0.0.1/mailegou/html/index.html";
+						location.href="../html/index.html";
 					}else if( msg == "1" ){
 						alert("密码错误");
 					}else if( msg == "2" ){
@@ -62,7 +62,7 @@ $(function(){
 			var data = `status=register&uname=${uname}&upwd=${upwd}`;
 			$.ajax({
 				type:"get",
-				url:"http://127.0.0.1/mailegou/php/login-register.php",
+				url:"../php/login-register.php",
 				data:data,
 				success:function( msg ){
 					if( msg=="0" ){
@@ -76,7 +76,7 @@ $(function(){
 						arr.push(json);
 						console.log(arr);
 						localStorage.setItem("regisloglist",JSON.stringify(arr))
-						location.href = "http://127.0.0.1/mailegou/html/login-register.html?status=login";
+						location.href = "../html/login-register.html?status=login";
 					}else if( msg=="1" ){
 						alert("注册失败");
 					}else if( msg=="2" ){

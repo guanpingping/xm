@@ -69,11 +69,13 @@ $( function(){
 					arr[i].count = count;
 					$(this).parent().children("#num").val(count);
 					$(this).parent().parent().children(".pro-price-tol").html("￥"+(arr[i].count*arr[i].price)+".00");
+					console.log(arr)
 					localStorage.setItem("prolist",JSON.stringify(arr));
 					calculate();
 					break;
 				}
 			}
+			return false;
 		})
 		
 		//删除
@@ -98,8 +100,8 @@ $( function(){
 			var money = 0;
 			$(".single:checked").each( function( index ,ele ){
 				var that = $(ele).parent().parent().find(".data-infomation");
-				count += parseInt( that.data("count"));
-				money += parseInt( that.data("count") * that.data("price"));
+				count += parseInt( that.children(".txt").val());
+				money += parseInt( that.children(".txt").val()* that.data("price"));
 			})
 			$(".count2").html(count);
 			$(".money2").html("￥"+money+".00");

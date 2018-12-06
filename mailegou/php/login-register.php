@@ -1,7 +1,5 @@
 <?php
-	
 	header("Access-Control-Allow-Origin:*");
-	
 	//接受数据
 	$status = isset($_GET["status"])?$_GET["status"]:"";
 	$uname = isset($_GET["uname"])?$_GET["uname"]:"";
