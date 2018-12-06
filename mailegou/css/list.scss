@@ -4,24 +4,30 @@ body {
 #main{
     width: 100%;
     min-height: 500px;
-    background: pink;
     .proinfo-wrap{
         padding: 50px;
-        background: skyblue;
         overflow: hidden;
         ul{
             width: 1190px;
             margin: 0 auto;
             li{
-               background: #fff;
+                border:1px solid #ccc;
+                background: #fff;
                 width: 222px;
                 margin: 0 10px 10px 0;
                 padding: 10px;
                 box-sizing: border-box;
                 a{
+                    &:hover{
+                        img{
+                           transform :scale(1.1);
+                        }
+                    }
                     img{
+                        transform: scale(1);
                         width: 200px;
                         height: 200px;
+                        transition: all 1s;
                     }
                     .proinfo-txt{
                         margin-top: 20px;

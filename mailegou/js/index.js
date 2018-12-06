@@ -1,14 +1,4 @@
 $(function(){
-	//登录成功后，显示用户名
-	var urlstr = location.href.split("?")[1];
-	if( urlstr != undefined){
-		var urlstrname = urlstr.split("=")[0];
-		var urlstruname = urlstr.split("=")[1];
-		if( urlstrname == "uname" ){
-			$(".login-after-none").html(urlstruname+"欢迎您！");
-		}
-	}
-	
 	/*轮播图的函数*/
 	function lbt(){
 		var index = 0;

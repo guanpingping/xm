@@ -1,24 +1,27 @@
 $(function(){
 	
-	//登录和注册的页面的显示与隐藏
-	var struname = location.href.split("?")[1].split("=")[0];
-	if( struname == "status" ){
-		str = location.href.split("=")[1];
-		if( str == "login" ){
-			$(".login-form").show();
-			$(".register-form").hide();
-			yzmload( $("#yzm") , $("#reyzm"));
+	var strurl = location.href.split("?")[1];
+	if( strurl ){
+		//登录和注册的页面的显示与隐藏
+		var struname = location.href.split("?")[1].split("=")[0];
+		if( struname == "status" ){
+			str = location.href.split("=")[1];
+			if( str == "login" ){
+				$(".login-form").show();
+				$(".register-form").hide();
+				yzmload( $("#yzm") , $("#reyzm"));
 			
-		}else if( str == "register" ){
+			}else if( str == "register" ){
+				$(".login-form").hide();
+				$(".register-form").show();
+				yzmload( $("#oyzm") , $("#ryzm"));
+			}
+		}else{
 			$(".login-form").hide();
 			$(".register-form").show();
 			yzmload( $("#oyzm") , $("#ryzm"));
-		}
-	}else{
-		$(".login-form").hide();
-		$(".register-form").show();
-		yzmload( $("#oyzm") , $("#ryzm"));
 		
+		}
 	}
 	
 	//登陆按钮通过ajax点击获取数据库的
@@ -36,7 +39,8 @@ $(function(){
 				success:function( msg ){
 					if( msg == "0" ){
 						alert("登录成功");
-						location.href="http://127.0.0.1/mailegou/html/index.html?uname="+uname;
+						localStorage.setItem("loguname",uname);
+						location.href="http://127.0.0.1/mailegou/html/index.html";
 					}else if( msg == "1" ){
 						alert("密码错误");
 					}else if( msg == "2" ){
@@ -63,6 +67,15 @@ $(function(){
 				success:function( msg ){
 					if( msg=="0" ){
 						alert("注册成功");
+						var json = {"uname":uname,"upwd":upwd};
+						var arr = [];
+						var brr = localStorage.getItem("regisloglist");
+						if(brr){
+							arr = JSON.parse( brr );
+						}
+						arr.push(json);
+						console.log(arr);
+						localStorage.setItem("regisloglist",JSON.stringify(arr))
 						location.href = "http://127.0.0.1/mailegou/html/login-register.html?status=login";
 					}else if( msg=="1" ){
 						alert("注册失败");

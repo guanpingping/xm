@@ -5,11 +5,9 @@ body {
 #main {
   width: 100%;
   min-height: 500px;
-  background: pink;
 }
 #main .proinfo-wrap {
   padding: 50px;
-  background: skyblue;
   overflow: hidden;
 }
 #main .proinfo-wrap ul {
@@ -17,15 +15,21 @@ body {
   margin: 0 auto;
 }
 #main .proinfo-wrap ul li {
+  border: 1px solid #ccc;
   background: #fff;
   width: 222px;
   margin: 0 10px 10px 0;
   padding: 10px;
   box-sizing: border-box;
 }
+#main .proinfo-wrap ul li a:hover img {
+  transform: scale(1.1);
+}
 #main .proinfo-wrap ul li a img {
+  transform: scale(1);
   width: 200px;
   height: 200px;
+  transition: all 1s;
 }
 #main .proinfo-wrap ul li a .proinfo-txt {
   margin-top: 20px;

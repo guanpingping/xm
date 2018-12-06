@@ -430,6 +430,7 @@ body {
   right: 0;
   width: 100px;
   color: #fff;
+  text-align: center;
 }
 .content .content-right .right-con-group {
   display: none;
@@ -604,6 +605,7 @@ body {
   width: 100px;
   height: 40px;
   outline: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=xianqingye.css.map */

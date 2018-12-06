@@ -359,6 +359,7 @@ header .nav-ind .nav-ind-list .active{
 	margin: 0 12px;
 	bottom: 0;
 	width: 32px;
+	height: 2px;
 }
 header .nav-ind .nav-ind-list .active::after{
 	content: '';
@@ -381,6 +382,10 @@ header .nav-ind .nav-cart{
 	border: 1px solid #e4e4e4;
 	text-align: center;
 	background: #f9f9f9;
+}
+
+#closelogin{
+	cursor: pointer;
 }
 
 /*left menu*/

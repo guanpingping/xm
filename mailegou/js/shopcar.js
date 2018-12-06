@@ -20,10 +20,9 @@ $( function(){
 			"oprice":that.data("oprice"),
 			"count":1
 		}
-		var brr = JSON.parse(localStorage.getItem("prolist"));
-		
+		var brr = localStorage.getItem("prolist");
 		if( brr ){
-			arr =  Array.from(brr);
+			arr =  JSON.parse( brr );
 			for( var i = 0 ; i < arr.length ; i++ ){
 				if( json.id == arr[i].id){
 					arr[i].count++;
@@ -35,7 +34,7 @@ $( function(){
 		if( flag ){
 			arr.push( json );
 		}
-		console.log(arr)
+//		console.log(arr)
 		localStorage.setItem("prolist",JSON.stringify(arr));
 	}
 	
@@ -43,9 +42,9 @@ $( function(){
 //	购物车中的件数
 	function getCount(){
 		var count = 0;
-		var brr = JSON.parse(localStorage.getItem("prolist"));
-		var arr = Array.from( brr );
+		var brr = localStorage.getItem("prolist");
 		if( brr ){
+			var arr = JSON.parse( brr );
 			for( var i = 0 ; i < arr.length ; i++ ){
 				count += arr[i].count;
 			}
@@ -96,18 +95,19 @@ $( function(){
 		    	"top":y
 		    })
 		    
-		    this.timer = setInterval(function(){
+		    var timer = setInterval(function(){
 		    	x = x + 10 ;
 		    	y =  this.a*x*x + this.b*x + this.c;
-		    	if( x >= this.endPoint.x ){
-		    		clearInterval( this.timer );
+		    	if( x < this.endPoint.x ){
+		    		img.css({
+		    			"left":x,
+		    			"top":y
+		    		})
+		    	}else{
+		    		clearInterval( timer );
 		    		img.remove();
 		    		getCount();
 		    	}
-		    	img.css({
-		    		"left":x,
-		    		"top":y
-		    	})
 		    }.bind(this),30)
 		}
 		});
