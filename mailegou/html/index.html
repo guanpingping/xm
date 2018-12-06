@@ -13,11 +13,16 @@
 			   overflow: hidden;
 			}
 		</style>
+		<script src="../js/jquery-1.11.1.min.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
 			<!--头部-->
 			<div id="header-wrap"></div>
+			<!-----------公共的尾部加载进来------------>
+			<script>
+				$("#header-wrap").load("public.html header");
+			</script>
 			<!--article-->
 			<article>
 				<!--轮播图-->
@@ -934,6 +939,12 @@
 			<div class="footimg"></div>
 			<!--尾部-->
 			<div id="footer-wrap"></div>
+			<!-----------公共的尾部------------>
+			<script>
+				/*公共的尾部加载进来*/
+				$("#left-menu-wrap").load("public.html .menubox");
+				$("#footer-wrap").load("public.html footer");
+			</script>
 			<!--fixed固定栏-->
 			<div class="fixbox">
 				<ul>
@@ -963,14 +974,7 @@
 			</div>
 		<div>
 			
-		<!--公共的头部和尾部只能放此处-->
-		<script src="../js/jquery-1.11.1.min.js"></script>
-		<script>
-			/*公共的头部尾部加载进来*/
-			$("#header-wrap").load("public.html header");
-			$("#left-menu-wrap").load("public.html .menubox");
-			$("#footer-wrap").load("public.html footer");
-		</script>
+		
 	</body>
 </html>
 <script src="../fontstyle/iconfont.js"></script>
