@@ -2,13 +2,16 @@ $( function(){
 	
 	//获取localStorage中存储的数据
 	var prostr = localStorage.getItem("prolist");
-	if( prostr ){
+	console.log(prostr);
+	if( prostr && prostr !="[]"){
+		$(".prolist").show();
+		$(".nopro").hide();
 		var arr = JSON.parse( prostr );
 		var str = "";
 		for( var i = 0 ; i < arr.length ; i++ ){
 			var item = arr[i];
 			str +=`
-					<tr>
+					<tr class="pro">
 							<td><input type="checkbox" class="single"/></td>
 							<td>
 								<img src="../img/${item['src']}"/>
@@ -88,6 +91,10 @@ $( function(){
 						localStorage.setItem("prolist",JSON.stringify(arr));
 						$(this).parent().parent().remove();
 						calculate();
+						if( arr.length == 0 ){
+							$(".prolist").hide();
+							$(".nopro").show();
+						}
 						break;
 					}
 				}
@@ -106,5 +113,17 @@ $( function(){
 			$(".count2").html(count);
 			$(".money2").html("￥"+money+".00");
 		}
+		//清空购物车
+		$(".clearshopcar").click(function(){
+			if(confirm("确认清空购物车吗？")){
+				localStorage.setItem("prolist","");
+				$(".table-list").find(".pro").remove();
+				$(".prolist").hide();
+				$(".nopro").show();
+			}
+		})
+	}else{
+		$(".prolist").hide();
+		$(".nopro").show();
 	}
 })

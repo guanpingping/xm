@@ -5,9 +5,24 @@ body{
     display: none;
 }
 #main{
-    width: 100%;
+    width: 1100px;
+    margin: 0 auto;
+    .main-top{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .nopro{
+        text-align: center;
+        font-size: 30px;
+        padding: 50px;
+        margin: 10px 0 100px 0;
+        border: 1px solid #ccc;
+        a{
+            font-size: 14px;
+        }
+    }
     .prolist{
-        padding: 40px;
+        padding: 40px 0;
         overflow: hidden;
         table{
             width: 100%;
@@ -60,7 +75,7 @@ body{
                        width: 40px;
                    }
                    input[class="single"]{
-                       margin-left: 20px;
+                       margin-left: 12px;
                    }
                    
                }
@@ -85,7 +100,6 @@ body{
         }
         .gomoney{
             text-align: right;
-            margin-right: 30px;
             button{
                 width: 120px;
                 height: 40px;
@@ -99,5 +113,9 @@ body{
     }
 }
 .delBtn{
+    cursor: pointer;
+}
+.clearshopcar{
+    margin-top: 10px;
     cursor: pointer;
 }
