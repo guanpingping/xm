@@ -1,9 +1,9 @@
 $( function(){
-	$(".open-menu-btn").click( function(){
-		$("#left-menu-wrap").show();
+	$(".open-menu-btn").mouseenter( function(){
+		$(".menubox").show();
 	})
-	$("#left-menu-wrap").mouseleave( function(){
-		$("#left-menu-wrap").hide();
+	$(".open-menu-btn").mouseleave( function(){
+		$(".menubox").hide();
 	})
 	
 	

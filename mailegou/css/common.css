@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6{
 
 header {
 	background: #fff;
-	z-index: 10;
+	z-index: 999;
 }
 
 header .top_no {
@@ -317,21 +317,20 @@ header .head-top .search .search-show li:hover{
 
 /*nav*/
 header .nav-ind{
-	line-height: 36px;
 	height: 36px;
 }
-header .nav-ind .open-m{
+header .nav-ind .open-menu-btn{
 	width: 180px;
 	text-align: center;
 	background: #cb351A;
 	color: #fff;
 	font-size: 15px;
-}
-header .nav-ind .open-menu-btn{
+	position: relative;
 	float: left;
-	line-height: 36px;
 	height: 36px;
-
+}
+header .nav-ind .open-menu-btn span{
+	line-height: 36px;
 }
 header .nav-ind .nav-ind-list{
 	position: relative;
@@ -345,7 +344,7 @@ header .nav-ind .nav-ind-list li a{
 	margin: 0 12px;
 	font-size: 16px;
 	display: inline-block;
-	height: 34px;
+	line-height: 34px;
 	color: #666;
 }
 
@@ -390,18 +389,17 @@ header .nav-ind .nav-cart{
 
 /*left menu*/
 .menubox{
-	z-index: 99;
+	position: absolute;
+	z-index: 999;
 }
 
  .menubox .menubox-left .open-m{
 	width: 180px;
-	text-align: center;
 	background: #cb351A;
 	color: #fff;
 	font-size: 15px;
 }
- .menubox .menubox-left .left-menu-group{
-	position: relative;
+ .menubox .menubox-left  .left-menu-group{
 	border-bottom: 1px solid #b82f17;
 	border-top: 1px solid #da5a44;
 	height: 49px;
@@ -422,10 +420,14 @@ header .nav-ind .nav-cart{
 	line-height: 20px;
 	margin-top: 5px;
 }
+ .menubox .menubox-left .left-menu-group .left-mgroup-span{
+ 	display: inline-block;
+ }
  .menubox .menubox-left .left-menu-group span{
 	color: #eca598;
 	font-size: 12px;
 	margin-right: 5px;
+	line-height: 12px;
 }
  .menubox .menubox-left .left-menu-group:hover{
 	background: #a90000;
@@ -437,7 +439,7 @@ header .nav-ind .nav-cart{
  .menubox  .menubox-two{
 	position: absolute;
 	top: 0;
-	left:218px;
+	left:180px;
 	width: 400px;
 	height: 480px;
 	box-shadow: 0 0 2px #CCCCCC inset;
@@ -445,6 +447,8 @@ header .nav-ind .nav-cart{
 	background: #fff;
 	opacity: 0.8;
 	display: none;
+	text-align: left;
+	font-size: 12px;
 }
  .menubox  .menubox-two .menubox-two-con{
 	line-height: 20px;
@@ -457,6 +461,8 @@ header .nav-ind .nav-cart{
 }
  .menubox  .menubox-two .menubox-two-con .menubox-two-con-group h3{
 	font-weight: 600;
+	color: #000;
+	height: 22px;
 }
  .menubox  .menubox-two .menubox-two-con .menubox-two-con-group a{
 	margin-right: 17px;

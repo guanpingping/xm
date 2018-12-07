@@ -2,6 +2,10 @@ body {
   background: #fff;
 }
 
+.menubox {
+  display: none;
+}
+
 #main {
   width: 100%;
   min-height: 500px;

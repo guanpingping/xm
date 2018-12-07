@@ -23,5 +23,11 @@ $( function(){
 	});
 	
 	
+	$(".open-menu-btn").mouseenter( function(){
+		$(".menubox").show();
+	})
+	$(".open-menu-btn").mouseleave( function(){
+		$(".menubox").hide();
+	})
 	
 })
