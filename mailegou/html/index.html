@@ -19,7 +19,7 @@
 		<div id="wrapper">
 			<!--头部-->
 			<div id="header-wrap"></div>
-			<!-----------公共的尾部加载进来------------>
+			<!-----------公共的头加载进来------------>
 			<script>
 				$("#header-wrap").load("public.html header");
 			</script>
@@ -976,8 +976,13 @@
 </html>
 <script src="../fontstyle/iconfont.js"></script>
 <script src="../js/public.js"></script>
-<script>
+<script async>
 	window.onload = function(){
+		
+		var cookie = document.createElement("script");
+		document.body.appendChild(cookie);
+		cookie.src="../js/cookie.js";
+
 		var scr = document.createElement("script");
 		document.body.appendChild(scr);
 		scr.src="../js/common.js";

@@ -37,6 +37,10 @@
 </html>
 <script>
 	window.onload = function(){
+		var cookie = document.createElement("script");
+		document.body.appendChild(cookie);
+		cookie.src="../js/cookie.js";
+		
 		var scr = document.createElement("script");
 		document.body.appendChild( scr );
 		scr.src="../js/common.js";

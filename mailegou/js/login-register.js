@@ -1,5 +1,4 @@
 $(function(){
-	
 	var strurl = location.href.split("?")[1];
 	if( strurl ){
 		//登录和注册的页面的显示与隐藏
@@ -23,19 +22,23 @@ $(function(){
 		
 		}
 	}
-	
-	//登陆按钮通过ajax点击获取数据库的
+
+	//登陆按钮通过ajax点击获取数据库的用户表
 	$("#ubtn").click(function(){
 		if( flaguyzm && flaguname && flagupwd ){
 			var uname = $("#uname").val(),	
 				upwd = $("#upwd").val();
-			var data = `status=login&uname=${uname}&upwd=${upwd}&id=${Math.random()}`;
 			$.ajax({
 				type:"get",
 				url:"../php/login-register.php",
 				async:true,
 				datatype:"json",
-				data:data,
+				data:{
+					"status":"login",
+					"uname":uname,
+					"upwd":upwd,
+					"id":Math.random()
+				},
 				success:function( msg ){
 					if( msg == "0" ){
 						alert("登录成功");
@@ -74,7 +77,6 @@ $(function(){
 							arr = JSON.parse( brr );
 						}
 						arr.push(json);
-						console.log(arr);
 						localStorage.setItem("regisloglist",JSON.stringify(arr))
 						location.href = "../html/login-register.html?status=login";
 					}else if( msg=="1" ){
@@ -182,7 +184,6 @@ $(function(){
 	var flagrepwd = null;
 	$("#rpwd").blur(function(){
 		var str = $(this).val();
-		console.log(str)
 		var ostr = $("#regpwd").val();
 		if( str == ostr){
 			$(".rpwderror").hide();
